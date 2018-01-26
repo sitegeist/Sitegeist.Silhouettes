@@ -1,4 +1,4 @@
-# Sitegeist.Silhuettes
+# Sitegeist.Silhouettes
 
 > Centralized property configuration for the Neos.ContentRepository
 
@@ -7,7 +7,7 @@ identically. This is usually achieved with mixins but those are bound to
 a fixed property name do not cover the case where properties with
 different names share similarities.
 
-The `Sitegeist.Silhuettes` package uses preconfigured
+The `Sitegeist.Silhouettes` package uses preconfigured
 property-configurations from the settings in multiple NodeTypes. This
 adds a way to centralize pererty-configuration for cases where mixins
 are not sufficient and settings shall be synchronized betweeen
@@ -86,8 +86,8 @@ NodeTypes.yaml
 
 ## Installation
 
-Sitegeist.Monocle is available via packagist. `"sitegeist/silhuettes" : "^1.0"` to the require section of the composer.json
-or run `composer require sitegeist/silhuettes`.
+Sitegeist.Monocle is available via packagist. `"sitegeist/silhouettes" : "^1.0"` to the require section of the composer.json
+or run `composer require sitegeist/silhouettes`.
 
 We use semantic-versioning so every breaking change will increase the major-version number.
 
