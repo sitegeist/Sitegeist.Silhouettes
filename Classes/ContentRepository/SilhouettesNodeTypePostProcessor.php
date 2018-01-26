@@ -11,9 +11,9 @@ class SilhouettesNodeTypePostProcessor implements NodeTypePostprocessorInterface
 
     /**
      * @var array
-     * @Flow\InjectConfiguration
+     * @Flow\InjectConfiguration(package="Sitegeist.Silhouettes", path="properties")
      */
-    protected $settings;
+    protected $propertySilhuetteSettings;
 
     /**
      * Processes the given $nodeType (e.g. changes/adds properties depending on the NodeType configuration and the specified $options)
@@ -23,21 +23,24 @@ class SilhouettesNodeTypePostProcessor implements NodeTypePostprocessorInterface
      * @param array $options The processor options
      * @return void
      */
-    public function process(NodeType $nodeType, array &$configuration, array $options) {
+    public function process(NodeType $nodeType, array &$configuration, array $options)
+    {
         if ($nodeType->hasConfiguration('properties')) {
             $localConfiguration = $nodeType->getConfiguration('properties');
             foreach ($localConfiguration as $propertyName => $propertyConfiguration) {
                 if (
                     $silhouettePath = Arrays::getValueByPath($propertyConfiguration, 'options.silhouette')
                 ) {
-                    $silhouetteConfiguration = Arrays::getValueByPath($this->settings, $silhouettePath);
+                    $silhouetteConfiguration = Arrays::getValueByPath($this->propertySilhuetteSettings, $silhouettePath);
                     if ($silhouetteConfiguration) {
-                        $mergedPropertyConfiguration = Arrays::arrayMergeRecursiveOverrule($silhouetteConfiguration, $propertyConfiguration);
+                        $mergedPropertyConfiguration = Arrays::arrayMergeRecursiveOverrule(
+                            $silhouetteConfiguration,
+                            $propertyConfiguration
+                        );
                         $configuration['properties'][$propertyName] = $mergedPropertyConfiguration;
                     }
                 }
             }
         }
     }
-
 }
