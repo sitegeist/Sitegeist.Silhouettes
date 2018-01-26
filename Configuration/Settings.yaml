@@ -1,0 +1,70 @@
+Sitegeist:
+  Silhuettes:
+    properties:
+      text:
+        plain:
+          type: string
+          defaultValue: ''
+          ui:
+            inlineEditable: TRUE
+            aloha:
+              placeholder: 'text block'
+              autoparagraph: FALSE
+              'format': {'removeFormat': TRUE}
+              'table': {}
+              'list': {}
+              'link': {}
+
+        block:
+          type: string
+          defaultValue: ''
+          ui:
+            inlineEditable: TRUE
+            aloha:
+              placeholder: 'text block'
+              autoparagraph: FALSE
+              'format':
+                'strong': TRUE
+                'em': TRUE
+                'u': FALSE
+                'sub': FALSE
+                'sup': FALSE
+                'del': FALSE
+                'p': FALSE
+                'h1': FALSE
+                'h2': FALSE
+                'h3': FALSE
+                'pre': FALSE
+                'removeFormat': TRUE
+              'table': {}
+              'list': {}
+              'link': {}
+
+        free:
+          type: string
+          defaultValue: ''
+          ui:
+            inlineEditable: TRUE
+            aloha:
+              placeholder: 'text ... '
+              autoparagraph: TRUE
+              'format':
+                'strong': TRUE
+                'em': TRUE
+                'u': FALSE
+                'sub': FALSE
+                'sup': FALSE
+                'del': FALSE
+                'p': TRUE
+                'h1': TRUE
+                'h2': TRUE
+                'h3': TRUE
+                'pre': TRUE
+                'removeFormat': TRUE
+              'table':
+                'table': TRUE
+              'list':
+                'ol': TRUE
+                'ul': TRUE
+              'link':
+                'a': TRUE

@@ -1,0 +1,21 @@
+{
+    "type": "neos-package",
+    "name": "sitegeist/silhouettes",
+    "description": "Preconfigure property-silhuettes that can be applied to various properties of multiple NodeTypes.",
+    "license": "GPL-3.0-or-later",
+    "require": {
+        "neos/neos": "^3.0.0",
+        "neos/content-repository": "^3.0.0",
+        "neos/utility-arrays": "^4.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sitegeist\\Silhouettes\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Sitegeist.Silhouettes"
+        }
+    }
+}

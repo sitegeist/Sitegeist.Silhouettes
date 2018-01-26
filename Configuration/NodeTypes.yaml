@@ -1,0 +1,4 @@
+'Neos.Neos:Node':
+  postprocessors:
+    'Sitegeist.Silhuettes':
+      postprocessor: \Sitegeist\Silhouettes\ContentRepository\SilhuettesNodeTypePostProcessor
