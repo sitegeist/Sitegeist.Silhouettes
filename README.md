@@ -13,9 +13,9 @@ adds a way to centralize pererty-configuration for cases where mixins
 are not sufficient and settings shall be synchronized betweeen
 properties with different names.
 
-The settings from the configured silhuette are merged with the
+The settings from the configured silhouette are merged with the
 configuration that is found in the nodeType with the local configuration
-taking precedence over the silhuette.
+taking precedence over the silhouette.
 
 ## Authors & Sponsors
 
@@ -30,7 +30,7 @@ Settings.yaml
 
 ```yaml
 Sitegeist:
-   Silhuettes:
+   Silhouettes:
        properties:
           vendor:
               text:
@@ -86,7 +86,7 @@ NodeTypes.yaml
 
 ## Installation
 
-Sitegeist.Monocle is available via packagist. `"sitegeist/silhouettes" : "^1.0"` to the require section of the composer.json
+Sitegeist.Silhouettes is available via packagist. `"sitegeist/silhouettes" : "^1.0"` to the require section of the composer.json
 or run `composer require sitegeist/silhouettes`.
 
 We use semantic-versioning so every breaking change will increase the major-version number.

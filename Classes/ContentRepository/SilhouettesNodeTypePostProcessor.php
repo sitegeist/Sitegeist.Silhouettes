@@ -6,7 +6,7 @@ use Neos\ContentRepository\Domain\Model\NodeType;
 use Neos\ContentRepository\NodeTypePostprocessor\NodeTypePostprocessorInterface;
 use Neos\Utility\Arrays;
 
-class SilhuettesNodeTypePostProcessor implements NodeTypePostprocessorInterface
+class SilhouettesNodeTypePostProcessor implements NodeTypePostprocessorInterface
 {
 
     /**
@@ -28,11 +28,11 @@ class SilhuettesNodeTypePostProcessor implements NodeTypePostprocessorInterface
             $localConfiguration = $nodeType->getConfiguration('properties');
             foreach ($localConfiguration as $propertyName => $propertyConfiguration) {
                 if (
-                    $silhuettePath = Arrays::getValueByPath($propertyConfiguration, 'options.silhuette')
+                    $silhouettePath = Arrays::getValueByPath($propertyConfiguration, 'options.silhouette')
                 ) {
-                    $silhuetteConfiguration = Arrays::getValueByPath($this->settings, $silhuettePath);
-                    if ($silhuetteConfiguration) {
-                        $mergedPropertyConfiguration = Arrays::arrayMergeRecursiveOverrule($silhuetteConfiguration, $propertyConfiguration);
+                    $silhouetteConfiguration = Arrays::getValueByPath($this->settings, $silhouettePath);
+                    if ($silhouetteConfiguration) {
+                        $mergedPropertyConfiguration = Arrays::arrayMergeRecursiveOverrule($silhouetteConfiguration, $propertyConfiguration);
                         $configuration['properties'][$propertyName] = $mergedPropertyConfiguration;
                     }
                 }
