@@ -1,15 +1,21 @@
 # Sitegeist.Silhuettes
-## Centralized property configuration for the Neos.ContentRepository
 
-It is common that properties in various NodeTypes are expected to behave identically. This is usually achieved with
-mixins. This is not optimal since on the one hand many mixins are created that only contain a single property and o the other hand
-this mechanism does not cover the case where properties with different names share similarities.
+> Centralized property configuration for the Neos.ContentRepository
 
-The `Sitegeist.Silhuettes` package uses preconfigured property-configuration from Settings in multiple NodeTypes. This adds a way to centralize configuration
-for cases where mixins are not sufficient and settings shall be synchronized betweeen properties with different names.
+It is common that properties in various NodeTypes are expected to behave
+identically. This is usually achieved with mixins but those are bound to
+a fixed property name do not cover the case where properties with
+different names share similarities.
 
-The settings from the configured silhuette are merged with the configuration that is found in the nodeType with the
-local configuration taking precedence over the silhuette.
+The `Sitegeist.Silhuettes` package uses preconfigured
+property-configurations from the settings in multiple NodeTypes. This
+adds a way to centralize pererty-configuration for cases where mixins
+are not sufficient and settings shall be synchronized betweeen
+properties with different names.
+
+The settings from the configured silhuette are merged with the
+configuration that is found in the nodeType with the local configuration
+taking precedence over the silhuette.
 
 ## Authors & Sponsors
 
