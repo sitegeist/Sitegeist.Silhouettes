@@ -75,10 +75,10 @@ NodeTypes.yaml
         aloha:
           placeholder: 'please add description ... '
       options:
-        silhuette: 'vendor.text.block'
+        silhouette: 'vendor.text.block'
 ```
 
-### Predefined silhuettes
+### Predefined silhouettes
 
 - `text.plain`: An inline editable string where no formatting is allowed.
 - `text.block`: An inline editable string where only inline formatting is enabled.
