@@ -13,7 +13,7 @@ class SilhouettesNodeTypePostProcessor implements NodeTypePostprocessorInterface
      * @var array
      * @Flow\InjectConfiguration(package="Sitegeist.Silhouettes", path="properties")
      */
-    protected $propertySilhuetteSettings;
+    protected $propertySilhouetteSettings;
 
     /**
      * Processes the given $nodeType (e.g. changes/adds properties depending on the NodeType configuration and the specified $options)
@@ -31,7 +31,7 @@ class SilhouettesNodeTypePostProcessor implements NodeTypePostprocessorInterface
                 if (
                     $silhouettePath = Arrays::getValueByPath($propertyConfiguration, 'options.silhouette')
                 ) {
-                    $silhouetteConfiguration = Arrays::getValueByPath($this->propertySilhuetteSettings, $silhouettePath);
+                    $silhouetteConfiguration = Arrays::getValueByPath($this->propertySilhouetteSettings, $silhouettePath);
                     if ($silhouetteConfiguration) {
                         $mergedPropertyConfiguration = Arrays::arrayMergeRecursiveOverrule(
                             $silhouetteConfiguration,
