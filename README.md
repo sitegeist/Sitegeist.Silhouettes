@@ -82,12 +82,12 @@ NodeTypes.yaml
 
 - `text.plain`: An inline editable string where no formatting is allowed.
 - `text.block`: An inline editable string where only inline formatting is enabled.
-- `text.free`: An inline editable string all formatting including blocks is allowed.
+- `text.free`: An inline editable string where all formatting including blocks is allowed.
 
 ## Installation
 
-Sitegeist.Silhouettes is available via packagist. `"sitegeist/silhouettes" : "^1.0"` to the require section of the composer.json
-or run `composer require sitegeist/silhouettes`.
+Sitegeist.Silhouettes is available via packagist. Add `"sitegeist/silhouettes" : "^1.0"` 
+to the require section of the composer.json or run `composer require sitegeist/silhouettes`.
 
 We use semantic-versioning so every breaking change will increase the major-version number.
 
