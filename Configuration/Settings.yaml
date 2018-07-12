@@ -38,7 +38,8 @@ Sitegeist:
                 'removeFormat': TRUE
               'table': {}
               'list': {}
-              'link': {}
+              'link':
+                'a': TRUE
 
         free:
           type: string
