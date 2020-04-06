@@ -83,8 +83,12 @@ NodeTypes.yaml
 ```yaml
 'Vendor.Package:NodeTypeName':
   childNodes:
-    options:
-      silhouette: 'vendor.defaultConstraints'    
+    column1:
+      options:
+        silhouette: 'vendor.defaultConstraints'    
+    column2:
+      options:
+        silhouette: 'vendor.defaultConstraints'    
   properties:
     description:
       ui:
