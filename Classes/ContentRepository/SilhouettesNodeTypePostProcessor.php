@@ -1,4 +1,5 @@
 <?php
+
 namespace Sitegeist\Silhouettes\ContentRepository;
 
 use Neos\Flow\Annotations as Flow;
@@ -16,6 +17,12 @@ class SilhouettesNodeTypePostProcessor implements NodeTypePostprocessorInterface
     protected $propertySilhouetteSettings;
 
     /**
+     * @var array
+     * @Flow\InjectConfiguration(package="Sitegeist.Silhouettes", path="childNodes")
+     */
+    protected $childNodesSilhouetteSettings;
+
+    /**
      * Processes the given $nodeType (e.g. changes/adds properties depending on the NodeType configuration and the specified $options)
      *
      * @param NodeType $nodeType (uninitialized) The node type to process
@@ -25,19 +32,25 @@ class SilhouettesNodeTypePostProcessor implements NodeTypePostprocessorInterface
      */
     public function process(NodeType $nodeType, array &$configuration, array $options)
     {
-        if ($nodeType->hasConfiguration('properties')) {
-            $localConfiguration = $nodeType->getConfiguration('properties');
-            foreach ($localConfiguration as $propertyName => $propertyConfiguration) {
-                if (
-                    $silhouettePath = Arrays::getValueByPath($propertyConfiguration, 'options.silhouette')
-                ) {
-                    $silhouetteConfiguration = Arrays::getValueByPath($this->propertySilhouetteSettings, $silhouettePath);
-                    if ($silhouetteConfiguration) {
-                        $mergedPropertyConfiguration = Arrays::arrayMergeRecursiveOverrule(
-                            $silhouetteConfiguration,
-                            $propertyConfiguration
-                        );
-                        $configuration['properties'][$propertyName] = $mergedPropertyConfiguration;
+        $allowedSettings = [
+            'properties' => $this->propertySilhouetteSettings,
+            'childNodes' => $this->childNodesSilhouetteSettings
+        ];
+        foreach($allowedSettings as $pathName => $silhouetteSettings) {
+            if ($nodeType->hasConfiguration($pathName)) {
+                $localConfiguration = $nodeType->getConfiguration($pathName);
+                foreach ($localConfiguration as $propertyName => $propertyConfiguration) {
+                    if (
+                      $silhouettePath = Arrays::getValueByPath($propertyConfiguration, 'options.silhouette')
+                    ) {
+                        $silhouetteConfiguration = Arrays::getValueByPath($silhouetteSettings, $silhouettePath);
+                        if ($silhouetteConfiguration) {
+                            $mergedPropertyConfiguration = Arrays::arrayMergeRecursiveOverrule(
+                                $silhouetteConfiguration,
+                                $propertyConfiguration
+                            );
+                            $configuration[$pathName][$propertyName] = $mergedPropertyConfiguration;
+                        }
                     }
                 }
             }
