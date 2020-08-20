@@ -44,38 +44,51 @@ Sitegeist:
             type: string
             defaultValue: ''
             ui:
-              inlineEditable: TRUE
-              aloha:
-                placeholder: i18n
-                autoparagraph: TRUE
-                'format':
-                  'strong': TRUE
-                  'em': TRUE
-                  'u': FALSE
-                  'sub': FALSE
-                  'sup': FALSE
-                  'del': FALSE
-                  'p': TRUE
-                  'h1': TRUE
-                  'h2': TRUE
-                  'h3': TRUE
-                  'pre': TRUE
-                  'removeFormat': TRUE
-                'table':
-                  'table': TRUE
-                'list':
-                  'ol': TRUE
-                  'ul': TRUE
-                'link':
-                  'a': TRUE
+              inlineEditable: true
+              inline:
+                editorOptions:
+                  placeholder: '(( text block ))'
+                  autoparagraph: true
+                  linking:
+                    anchor: true
+                    title: true
+                    relNofollow: false
+                    targetBlank: false
+                  formatting:
+                    strong: true
+                    em: true
+                    u: false
+                    underline: false
+                    strikethrough: false
+                    sub: false
+                    sup: false
+                    del: false
+                    p: true
+                    h1: false
+                    h2: false
+                    h3: false
+                    h4: false
+                    h5: false
+                    h6: false
+                    pre: false
+                    removeFormat: true
+                    left: false
+                    right: false
+                    center: false
+                    justify: false
+                    table: false
+                    ol: false
+                    ul: false
+                    a: true
+  
       childNodes:
         vendor:
           defaultConstraints:
             constraints:
-              'Neos.Neos:Content': TRUE
-              'Neos.NodeTypes.BaseMixins:TitleMixin': TRUE
-              'Neos.Demo:Constraint.Content.Carousel': TRUE
-              'Neos.Demo:Constraint.Content.Column': FALSE
+              'Neos.Neos:Content': true
+              'Neos.NodeTypes.BaseMixins:TitleMixin': true
+              'Neos.Demo:Constraint.Content.Carousel': true
+              'Neos.Demo:Constraint.Content.Column': false
 ```
 
 NodeTypes.yaml
@@ -93,8 +106,9 @@ NodeTypes.yaml
     description:
       ui:
         label: 'Description'
-        aloha:
-          placeholder: 'please add description ... '
+        inline:
+          editorOptions:
+            placeholder: 'please add description ... '
       options:
         silhouette: 'vendor.text.block'
 ```
