@@ -6,66 +6,69 @@ Sitegeist:
           type: string
           defaultValue: ''
           ui:
-            inlineEditable: TRUE
-            aloha:
-              placeholder: 'text block'
-              autoparagraph: FALSE
-              'format': {'removeFormat': TRUE}
-              'table': {}
-              'list': {}
-              'link': {}
+            inlineEditable: true
+            inline:
+              editorOptions:
+                placeholder: '(( text plain ))'
+                autoparagraph: false
+                'format': {'removeFormat': true}
+                'table': {}
+                'list': {}
+                'link': {}
 
         block:
           type: string
           defaultValue: ''
           ui:
-            inlineEditable: TRUE
-            aloha:
-              placeholder: 'text block'
-              autoparagraph: FALSE
-              'format':
-                'strong': TRUE
-                'em': TRUE
-                'u': FALSE
-                'sub': FALSE
-                'sup': FALSE
-                'del': FALSE
-                'p': FALSE
-                'h1': FALSE
-                'h2': FALSE
-                'h3': FALSE
-                'pre': FALSE
-                'removeFormat': TRUE
-              'table': {}
-              'list': {}
-              'link':
-                'a': TRUE
+            inlineEditable: true
+            inline:
+              editorOptions:
+                placeholder: '(( text block ))'
+                autoparagraph: false
+                'format':
+                  'strong': TRUE
+                  'em': TRUE
+                  'u': false
+                  'sub': false
+                  'sup': false
+                  'del': false
+                  'p': false
+                  'h1': false
+                  'h2': false
+                  'h3': false
+                  'pre': false
+                  'removeFormat': true
+                'table': {}
+                'list': {}
+                'link':
+                  'a': TRUE
 
         free:
           type: string
           defaultValue: ''
           ui:
-            inlineEditable: TRUE
-            aloha:
-              placeholder: 'text ... '
-              autoparagraph: TRUE
-              'format':
-                'strong': TRUE
-                'em': TRUE
-                'u': FALSE
-                'sub': FALSE
-                'sup': FALSE
-                'del': FALSE
-                'p': TRUE
-                'h1': TRUE
-                'h2': TRUE
-                'h3': TRUE
-                'pre': TRUE
-                'removeFormat': TRUE
-              'table':
-                'table': TRUE
-              'list':
-                'ol': TRUE
-                'ul': TRUE
-              'link':
-                'a': TRUE
+            inlineEditable: true
+            inline:
+              editorOptions:
+                placeholder: '(( text ))'
+                autoparagraph: true
+                'format':
+                  'strong': true
+                  'em': true
+                  'u': false
+                  'sub': false
+                  'sup': false
+                  'del': false
+                  'p': true
+                  'h1': true
+                  'h2': true
+                  'h3': true
+                  'pre': true
+                  'removeFormat': true
+                'table':
+                  'table': true
+                'list':
+                  'ol': true
+                  'ul': true
+                'link':
+                  'a': true
