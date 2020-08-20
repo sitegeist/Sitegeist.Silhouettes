@@ -47,26 +47,40 @@ Sitegeist:
               inlineEditable: true
               inline:
                 editorOptions:
-                  placeholder: i18n
+                  placeholder: '(( text block ))'
                   autoparagraph: true
-                  'format':
-                    'strong': true
-                    'em': true
-                    'u': false
-                    'sub': false
-                    'sup': false
-                    'del': false
-                    'p': true
-                    'h2': true
-                    'h3': true
-                    'pre': true
-                    'removeFormat': true
-                  'table':
-                  'list':
-                    'ol': true
-                    'ul': true
-                  'link':
-                    'a': true
+                  linking:
+                    anchor: true
+                    title: true
+                    relNofollow: false
+                    targetBlank: false
+                  formatting:
+                    strong: true
+                    em: true
+                    u: false
+                    underline: false
+                    strikethrough: false
+                    sub: false
+                    sup: false
+                    del: false
+                    p: true
+                    h1: false
+                    h2: false
+                    h3: false
+                    h4: false
+                    h5: false
+                    h6: false
+                    pre: false
+                    removeFormat: true
+                    left: false
+                    right: false
+                    center: false
+                    justify: false
+                    table: false
+                    ol: false
+                    ul: false
+                    a: true
+  
       childNodes:
         vendor:
           defaultConstraints:
