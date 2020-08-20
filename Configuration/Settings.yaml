@@ -1,6 +1,7 @@
 Sitegeist:
   Silhouettes:
     properties:
+      
       text:
         plain:
           type: string
@@ -11,9 +12,7 @@ Sitegeist:
               editorOptions:
                 placeholder: '(( text plain ))'
                 autoparagraph: false
-                'format': {'removeFormat': true}
-                'table': {}
-                'list': {}
+                'formatting': {'removeFormat': true}
                 'link': {}
 
         block:
@@ -24,24 +23,38 @@ Sitegeist:
             inline:
               editorOptions:
                 placeholder: '(( text block ))'
-                autoparagraph: false
-                'format':
-                  'strong': TRUE
-                  'em': TRUE
-                  'u': false
-                  'sub': false
-                  'sup': false
-                  'del': false
-                  'p': false
-                  'h1': false
-                  'h2': false
-                  'h3': false
-                  'pre': false
-                  'removeFormat': true
-                'table': {}
-                'list': {}
-                'link':
-                  'a': TRUE
+                autoparagraph: true
+                linking:
+                  anchor: true
+                  title: true
+                  relNofollow: false
+                  targetBlank: false
+                formatting:
+                  strong: true
+                  em: true
+                  u: false
+                  underline: false
+                  strikethrough: false
+                  sub: false
+                  sup: false
+                  del: false
+                  p: true
+                  h1: false
+                  h2: false
+                  h3: false
+                  h4: false
+                  h5: false
+                  h6: false
+                  pre: false
+                  removeFormat: true
+                  left: false
+                  right: false
+                  center: false
+                  justify: false
+                  table: false
+                  ol: false
+                  ul: false
+                  a: true
 
         free:
           type: string
@@ -52,23 +65,36 @@ Sitegeist:
               editorOptions:
                 placeholder: '(( text ))'
                 autoparagraph: true
-                'format':
-                  'strong': true
-                  'em': true
-                  'u': false
-                  'sub': false
-                  'sup': false
-                  'del': false
-                  'p': true
-                  'h1': true
-                  'h2': true
-                  'h3': true
-                  'pre': true
-                  'removeFormat': true
-                'table':
-                  'table': true
-                'list':
-                  'ol': true
-                  'ul': true
-                'link':
-                  'a': true
+                linking:
+                  anchor: true
+                  title: true
+                  relNofollow: false
+                  targetBlank: false
+                  #startingPoint: '/sites'
+                  #linkClass: true
+                formatting:
+                  strong: true
+                  em: true
+                  u: true
+                  underline: true
+                  strikethrough: true
+                  sub: false
+                  sup: false
+                  del: false
+                  p: true
+                  h1: true
+                  h2: true
+                  h3: true
+                  h4: true
+                  h5: true
+                  h6: true
+                  pre: true
+                  removeFormat: true
+                  left: true
+                  right: true
+                  center: true
+                  justify: true
+                  table: true
+                  ol: true
+                  ul: true
+                  a: true
