@@ -12,8 +12,7 @@ Sitegeist:
               editorOptions:
                 placeholder: '(( text plain ))'
                 autoparagraph: false
-                'formatting': {'removeFormat': true}
-                'link': {}
+                formatting: {'removeFormat': true}
 
         block:
           type: string
@@ -70,8 +69,6 @@ Sitegeist:
                   title: true
                   relNofollow: false
                   targetBlank: false
-                  #startingPoint: '/sites'
-                  #linkClass: true
                 formatting:
                   strong: true
                   em: true
@@ -90,10 +87,10 @@ Sitegeist:
                   h6: true
                   pre: true
                   removeFormat: true
-                  left: true
-                  right: true
-                  center: true
-                  justify: true
+                  left: false
+                  right: false
+                  center: false
+                  justify: false
                   table: true
                   ol: true
                   ul: true
