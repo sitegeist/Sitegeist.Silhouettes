@@ -1,5 +1,8 @@
 # Sitegeist.Silhouettes
 
+*Neos 7.0 includes the features of Sitegeist.Silhouettes as NodeType presets.
+This package will be abandoned in favor of that eventually!*
+
 > Centralized property configuration for the Neos.ContentRepository
 
 It is common that properties in various NodeTypes are expected to behave
