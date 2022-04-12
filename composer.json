@@ -4,9 +4,9 @@
     "description": "Preconfigure property-silhuettes that can be applied to various properties of multiple NodeTypes.",
     "license": "GPL-3.0-or-later",
     "require": {
-        "neos/neos-ui": "^4.0 || ^5.0 || ^7.0 || dev-master",
-        "neos/content-repository": "^4.0 || ^5.0 || ^7.0 || dev-master",
-        "neos/utility-arrays": "^5.0 || ^6.0 || ^7.0 || dev-master"
+        "neos/neos-ui": "^4.0 || ^5.0 || ^7.0 || ^8.0 || dev-master",
+        "neos/content-repository": "^4.0 || ^5.0 || ^7.0 || ^8.0 || dev-master",
+        "neos/utility-arrays": "^5.0 || ^6.0 || ^7.0 || ^8.0 || dev-master"
     },
     "autoload": {
         "psr-4": {
